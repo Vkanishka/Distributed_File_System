@@ -103,43 +103,6 @@ def upload_f():
     return jsonify({'success': True})
 
 
-#
-# # to delete
-# @application.route('/file/delete', methods=['POST'])
-# def delete():
-#     print "\nDELETING ...\n"
-#     headers = request.headers
-#     encryp_dir = headers['directory']
-#     encryp_filename = headers['filename']
-#     access_key = headers['access_key']
-#
-#     session_id = decrypt_data(AUTH_KEY, access_key).strip()
-#     decry_dir = decrypt_data(session_id, encryp_dir)
-#     decry_filename = decrypt_data(session_id, encryp_filename)
-#
-#     hash_key = hashlib.md5()
-#     hash_key.update(decry_dir)
-#
-#     if not db.directories.find_one(
-#             {"name": decry_dir, "identifier": hash_key.hexdigest(),
-#              "server": server_inst()["identifier"]}):
-#         print("No directory found")
-#         return jsonify({"success": False})
-#     else:
-#         directory = db.directories.find_one(
-#             {"name": decry_dir, "identifier": hash_key.hexdigest(),
-#              "server": server_inst()["identifier"]})
-#     file = db.files.find_one(
-#         {"name": decry_filename, "directory": directory['identifier'], "server": server_inst()["identifier"]})
-#     if not file:
-#         print("No file found")
-#         return jsonify({"success": False})
-#
-#     if (server_inst()["master_server"]):
-#         thr = threading.Thread(target=asynchronous_delete, args=(file['identifier'], directory['identifier'], headers),
-#                                kwargs={})
-#         thr.start()
-#     return jsonify({'success': True})
 
 
 # to Download
