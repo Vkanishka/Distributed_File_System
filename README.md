@@ -12,14 +12,14 @@ DFS is a Distributed file system, which is implemented in python
 
 --> python 2.7 is used for this program
 
-packages : base64 - for decode and encode 
-           json   - data interchange format inspired by JavaScript
-           haslib - Secure hashes and message digests
-           random - used to generate pseudo-random numbers
-           string - contains common string operations
-           AES    - Crypto.Cipher
-           Flask  - whinch is an Rest API
-           MongoClient 
+packages : * base64 - for decode and encode 
+           * json   - data interchange format inspired by JavaScript
+           * haslib - Secure hashes and message digests
+           * random - used to generate pseudo-random numbers
+           * string - contains common string operations
+           * AES    - Crypto.Cipher
+           * Flask  - whinch is an Rest API
+           * MongoClient 
            
 POSTMAN - it is one of the most used REST client allover and it is complete set of toolchain for the API Development.
 
@@ -28,6 +28,7 @@ POSTMAN - it is one of the most used REST client allover and it is complete set 
 3rd - Run users.py
 
         DFS -- Authentication
+        
 * details of Mongo DB connection
 * Creating conn with Mongo Data base
 * drop the tables
@@ -41,10 +42,22 @@ POSTMAN - it is one of the most used REST client allover and it is complete set 
 * response back to client 
 
        DFS -- Directory_Service
-* packages: datetime
-            cache from diskcache
-            jsonify
-            request
-            pyMongo
+
+* run the direcvtory_service     
+* packages used : * datetime
+                  * cache from diskcache
+                  * jsonify
+                  * request
+                  * pyMongo
             
-     
+* Details of Mongo DB server and connection
+* enter 32 char's Authentication key
+* Connection to data base
+* directory path is used to store cache data
+              
+             /tmp/mycachedir
+* host - Server_Host
+  port - Server_Port
+  
+* In the process of uploading check if the directory exist or not and also check if the files exist in the server.
+* In the Process of Downloading, find the file directory, details of the file and then caching.
