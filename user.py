@@ -31,6 +31,7 @@ payload = {'u_id': user_id
     , 'u_password': user_pwd}
 request = requests.post("http://localhost:5000/user/c_user_aut", data=json.dumps(payload))
 
+
 if (request != None):
     print "\nCONTINUE WITH NEXT STEPS HERE - FILE MANAGEMENT\n"
 
