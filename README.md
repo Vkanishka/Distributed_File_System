@@ -61,3 +61,6 @@ POSTMAN - it is one of the most used REST client allover and it is complete set 
   
 * In the process of uploading check if the directory exist or not and also check if the files exist in the server.
 * In the Process of Downloading, find the file directory, details of the file and then caching.
+
+
+* for the Testing of Distributed File System, run the servers as per mentioned process.
